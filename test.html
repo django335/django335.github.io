@@ -21,9 +21,11 @@
       var result = window.confirm('move to other domain.');
       if( result ) {
         console.log('OK');
+        return true;
       }
       else {
         console.log('canceled');
+        return false;
       }
     }
   </script>
