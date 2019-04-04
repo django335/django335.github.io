@@ -15,6 +15,18 @@
 <link rel="shortcut icon" href="">
 </head>
 <body>
+  
+  <script language="JavaScript">
+    function msgdsp() {
+      var result = window.confirm('move to other domain.');
+      if( result ) {
+        location.href="https://www.yahoo.co.jp";
+      }
+      else {
+        console.log('canceled');
+      }
+    }
+  </script>
 
   <div>
     <a href="https://www.yahoo.co.jp">normal link</a>
@@ -39,7 +51,7 @@
   </div>
   <div>
     <INPUT type="button" name="B1" value="このボタンを押すとアラートを表示します"
-     onclick="alert('test');">
+     onclick="msgdsp();">
    </div>
 
 </body>
