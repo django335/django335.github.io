@@ -20,7 +20,7 @@
     function msgdsp() {
       var result = window.confirm('move to other domain.');
       if( result ) {
-        location.href="https://www.yahoo.co.jp";
+        console.log('OK');
       }
       else {
         console.log('canceled');
@@ -50,7 +50,7 @@
     <a href="https://django335.github.io/test2.html"> same domain link</a>
   </div>
   <div>
-    <INPUT type="button" name="B1" value="show popup"
+    <INPUT type="button" name="B1" value="show confirm"
      onclick="msgdsp();">
    </div>
 
