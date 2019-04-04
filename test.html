@@ -56,7 +56,8 @@
      onclick="msgdsp();">
   </div>
   <div>
-    <a href="https://www.yahoo.co.jp" onclick="msgdsp();">link with click event</a>
+    <a href="https://www.yahoo.co.jp" onclick="if(!msgdsp()) return false;">link with click event</a>
+  </div>
 
 </body>
 </html>
