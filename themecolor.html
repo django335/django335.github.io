@@ -12,17 +12,19 @@
 
 <style type="text/css">
   :root {
+    --main-bg: #d1d1d6;
     --main-bg-gray: #d1d1d6;
     --main-bg-blue: #38ade6;
   }
   @media (prefers-color-scheme: dark) {
     :root {
+      --main-bg: #3a3a3c;
       --main-bg-gray: #3a3a3c;
       --main-bg-blue: #64d3ff;
     }
   }
   body {
-    background-color: var(--main-bg-gray);
+    background-color: var(--main-bg);
   }
 </style>
 </head>
@@ -33,11 +35,19 @@
 
   <script language="javascript" type="text/javascript">
     function changeThemeColorBlue() {
-      document.body.style.backgroundColor = var(--main-bg-blue);
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.style.setProperty('--main-bg','#64d3ff');
+      } else {
+        document.documentElement.style.setProperty('--main-bg','#38ade6');
+      }
     }
     
     function changeThemeColorGray() {
-      document.body.style.backgroundColor = var(--main-bg-gray);
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.style.setProperty('--main-bg','#3a3a3c');
+      } else {
+        document.documentElement.style.setProperty('--main-bg','#d1d1d6');
+      }
     }
     
   </script>
