@@ -10,19 +10,34 @@
 <meta name="theme-color" content="#4285f4">
 <style type="text/css">
   :root {
-    --main-bg: #d1d1d6
+    --main-bg-gray: #d1d1d6
+    --main-bg-blue: #d1d1d6
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --main-bg: #3a3a3c
+      --main-bg-gray: #3a3a3c
+      --main-bg-blue: #3a3a3c
     }
   }
   body {
-    background-color: var(--main-bg);
+    background-color: var(--main-bg-gray);
   }
 </style>
 </head>
 <body>
   <div>theme color test page</div>
+  <button onclick="changeThemeColorGray();">gray</button></b>
+  <button onclick="changeThemeColorBlue();">blue</button>
+
+  <script language="javascript" type="text/javascript">
+    function changeThemeColorBlue() {
+      document.body.style.backgroundColor = var(--main-bg-blue);
+    }
+    
+    function changeThemeColorGray() {
+      document.body.style.backgroundColor = var(--main-bg-gray);
+    }
+    
+  </script>
 </body>
 </html>
