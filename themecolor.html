@@ -11,6 +11,7 @@
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#3a3a3c">
 
 <style type="text/css">
+  /*
   :root {
     --main-bg: #d1d1d6;
     --main-bg-gray: #d1d1d6;
@@ -26,9 +27,24 @@
   body {
     background-color: var(--main-bg);
   }
+  */
+  .graybg {
+    background-color: #d1d1d6;
+  }
+  .bluebg {
+    background-color: #38ade6;
+  }
+  @media (prefers-color-scheme: dark) {
+    .graybg {
+      background-color: #3a3a3c;
+   }
+    .bluebg {
+      background-color: #64d3ff;
+    }
+  }
 </style>
 </head>
-<body>
+<body class="graybg">
   <div>theme color test page</div>
   <button onclick="changeThemeColorGray();">gray</button></b>
   <button onclick="changeThemeColorBlue();">blue</button>
