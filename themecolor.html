@@ -51,19 +51,25 @@
 
   <script language="javascript" type="text/javascript">
     function changeThemeColorBlue() {
+      document.querySelector("body").className="bluebg"
+      /*
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.style.setProperty('--main-bg','#64d3ff');
       } else {
         document.documentElement.style.setProperty('--main-bg','#38ade6');
       }
+      */
     }
     
     function changeThemeColorGray() {
+       document.querySelector("body").className="graybg"
+      /*
       if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.documentElement.style.setProperty('--main-bg','#3a3a3c');
       } else {
         document.documentElement.style.setProperty('--main-bg','#d1d1d6');
       }
+      */
     }
     
   </script>
