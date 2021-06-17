@@ -60,6 +60,7 @@
     }
 
     function changeThemeColor() {
+      console.log(getComputedStyle(document.body).backgroundColor);
       document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.body).backgroundColor;
     }
 
