@@ -66,7 +66,7 @@
 
     document.addEventListener("DOMContentLoaded", function() {
       var mediqQuery = window.matchMedia('(prefers-color-scheme: light)');  
-      mediqQuery.addEventLister(changeThemeColor);
+      mediqQuery.addListener(changeThemeColor);
       
       changeThemeColor();
     })
