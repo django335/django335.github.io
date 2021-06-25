@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Counter</title>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="liffviewtype" content="full">
+<link rel="stylesheet" href="">
+  
+<style>
+</style>
+
+<script language="javascript" type="text/javascript">
+  var count = 0;
+  function updateCounterElement() {
+    var element = document.getElementById("counter");
+    element.innerHTML = count;
+  };
+  function incrementCount() {
+    count++;
+    updateCounterElement()
+  };
+  window.onload = function(){
+    setInterval(incrementCount, 1000);
+  };
+</script>
+
+</head>
+<body>
+  <h1>Counter</h1>
+  <div style="background-color:#EDF7FF;">
+    <p id="counter">0</p>
+　　　　</div>
+</body>
+</html>
