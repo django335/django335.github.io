@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>background color test page</title>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+  .graybg {
+    background-color: #d1d1d6;
+  }
+  .bluebg {
+    background-color: #38ade6;
+  }
+  @media (prefers-color-scheme: dark) {
+    .graybg {
+      background-color: #3a3a3c;
+   }
+    .bluebg {
+      background-color: #64d3ff;
+    }
+  }
+</style>
+</head>
+<body style="background-color: blue;">
+  <div>theme color test page</div>
+  <button onclick="changeThemeColorGray();">gray</button></b>
+  <button onclick="changeThemeColorBlue();">blue</button>
+
+  <script language="javascript" type="text/javascript">
+    function changeThemeColorBlue() {
+      document.querySelector("body").className="bluebg"
+      changeThemeColor()
+    }
+
+    function changeThemeColorGray() {
+      document.querySelector("body").className="graybg"
+      changeThemeColor()
+    }
+
+    function changeThemeColor() {
+      document.querySelector('meta[name="theme-color"]').content = getComputedStyle(document.body).backgroundColor;
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+      var mediqQuery = window.matchMedia('(prefers-color-scheme: light)');  
+      mediqQuery.addListener(changeThemeColor);
+      
+      changeThemeColor();
+    })
+    
+  </script>
+</body>
+</html>
