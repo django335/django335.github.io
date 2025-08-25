@@ -30,5 +30,14 @@
 
   <audio id="bgm2" src="https://download.samplelib.com/mp3/sample-3s.mp3" loop preload="auto"></audio>
 
+  <script>
+    document.getElementById('start').addEventListener('click', () => {
+      document.getElementById('bgm').play();
+    });
+    document.getElementById('start2').addEventListener('click', () => {
+      document.getElementById('bgm2').play();
+    });
+  </script>
+  
 </body>
 </html>
